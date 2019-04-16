@@ -5,7 +5,7 @@ myImage.onclick = function() {
     if(mySrc === 'images/rabbit.jpg') {
       myImage.setAttribute ('src','images/perspective.jpg');
     } else {
-      myImage.setAttribute ('src','rabbit.jpg');
+      myImage.setAttribute ('src','images/rabbit.jpg');
     }
 }
 
@@ -23,7 +23,7 @@ if(!localStorage.getItem('name')) {
 } else {
   var storedName = localStorage.getItem('name');
   myHeading.textContent = 'Welcome to our Website, ' + storedName + '!';
-}  
+}
 
 myButton.onclick = function() {
     setUserName();
