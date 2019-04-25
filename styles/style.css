@@ -6,11 +6,11 @@ html {
 }
 
 body {
-    width: 1000px;
+    width: 600px;
     margin: 0 auto;
     background-color: cadetblue;
     padding: 0 20px 20px 20px;
-    border: 3px solid black;
+    border: 5px solid black;
 }
 
 h1 {
@@ -24,8 +24,8 @@ h1 {
 
 p, li {
     font-size: 16px;
-    line-height: 1;
-    letter-spacing: 1px;
+    line-height: 2.5;
+    letter-spacing: 2px;
 }
 img {
     display: block;
