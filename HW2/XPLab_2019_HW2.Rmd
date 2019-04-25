@@ -54,7 +54,8 @@ sessionInfo()
 
 *ANSWER:*
 
-
+## R version 3.5.3 (2019-03-11)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
 
 b.
 ---
@@ -66,8 +67,8 @@ to load the package and show the `sessionInfo` again.
 
 ```{r tidy = FALSE, message = TRUE, warning = TRUE, error = FALSE}
 
-# YOUR CODE HERE
-
+library(tidyverse)
+sessionInfo()
 ```
 
 
@@ -75,7 +76,7 @@ to load the package and show the `sessionInfo` again.
 
 *ANSWER:*
 
-(your answer here)
+tidyverse_1.2.1
 
 
 ___
