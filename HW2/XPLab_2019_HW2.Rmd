@@ -53,7 +53,7 @@ sessionInfo()
 
 *ANSWER:*
 
-R version: 3.5.3
+R version: 3.6.0
 Platform: 64-bit
 
 
