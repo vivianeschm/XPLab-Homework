@@ -2,3 +2,5 @@
 We will publish a Website using GitHub Pages.
 
 Please open https://vivianeschm.github.io/XPLab-Homework/HW1 to visit our Website.
+
+Please open https://vivianeschm.github.io/XPLab-Homework/HW2/XPLab_2019_HW2.html to see our results to Homeworksheet 2. 
