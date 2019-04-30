@@ -1,7 +1,7 @@
 ---
 title: "Homework Task 2 -- Basics in R"
 date: 'Due: Thursday, May 2 by 08:59 CET'
-author: "Viviane Schmidt, Sven Groen, Lea Doppertin"
+author: "Lea Doppertin, Sven Groen, Viviane Schmidt"
 output:
   html_document
 ---
@@ -26,7 +26,6 @@ output:
 ```{r}
 set.seed(123) # this ensures that any psuedo-random computations are always the same
 ```
-
 ___
 
 # 1. Installing and running R
@@ -54,8 +53,9 @@ sessionInfo()
 
 *ANSWER:*
 
-## R version 3.5.3 (2019-03-11)
-## Platform: x86_64-w64-mingw32/x64 (64-bit)
+R version: 3.5.3
+Platform: 64-bit
+
 
 b.
 ---
@@ -69,6 +69,7 @@ to load the package and show the `sessionInfo` again.
 
 library(tidyverse)
 sessionInfo()
+
 ```
 
 
@@ -76,7 +77,7 @@ sessionInfo()
 
 *ANSWER:*
 
-tidyverse_1.2.1
+tidyverse version 1.2.1
 
 
 ___
@@ -97,18 +98,17 @@ using the `print()` function.
 
 ```{r tidy = FALSE, message = FALSE, warning = FALSE, error = FALSE}
 
-# YOUR CODE HERE
+iris_tibble <- as_tibble(ToothGrowth)
 
-
+iris_tibble
 ```
-
 
 
 **Which data type is the variable "supp"?**
 
 *ANSWER:*
 
-(your answer here)
+The variable "supp" has the data type factor.
 
 
 b.
@@ -119,8 +119,8 @@ that were give orange juice.
 
 ```{r tidy = FALSE, message = FALSE, warning = FALSE, error = FALSE}
 
-# YOUR CODE HERE
-
+guinea_pigsOJ <- filter(iris_tibble, supp == "OJ")
+guinea_pigsOJ
 
 ```
 
@@ -128,7 +128,7 @@ that were give orange juice.
 
 *ANSWER:*
 
-(your answer here)
+30 datapoints are left.
 
 
 
@@ -140,7 +140,7 @@ that received ascorbic acid and had a dosage of 1.0mg or greater.
 
 ```{r tidy = FALSE, message = FALSE, warning = FALSE, error = FALSE}
 
-# YOUR CODE HERE
+filter(iris_tibble, supp == "VC", dose >= 1.0)
 
 
 
@@ -157,7 +157,7 @@ instructions read the help page for `summarise()`.
 
 ```{r tidy = FALSE, message = FALSE, warning = FALSE, error = FALSE}
 
-# YOUR CODE HERE
+iris_tibble %>% group_by(supp) %>% summarise(Mean = mean(len))
 
 
 ```
@@ -167,7 +167,7 @@ instructions read the help page for `summarise()`.
 
 *ANSWER:*
 
-(your answer here)
+Mean tooth length for OJ: 20.66333
 
 
 ___
@@ -184,9 +184,12 @@ supplement types in different colours.
 
 ```{r tidy = FALSE, message = FALSE, warning = FALSE, error = FALSE}
 
-# YOUR CODE HERE
+ToothGrowth %>% ggplot(aes(dose, len, colour = supp)) + geom_point()
 
 
+```
+```{r}
+ToothGrowth %>% group_by(supp, dose) %>% summarise(Mean = mean(len))
 ```
 
 
@@ -194,7 +197,7 @@ supplement types in different colours.
 
 *ANSWER:*
 
-(your answer here)
+It seems as if guinea pigs receiving orange juice as a supplement (0.5 or 1 mg/day) have longer teeths than guinea pigs getting ascorbic acid as a supplement (0.5 or 1 mg/day). If the guinea pigs receive a dose of 2mg/day on average the teeth length is the same for both delivery methods.
 
 
 ___
