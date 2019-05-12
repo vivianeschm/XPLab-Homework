@@ -2,55 +2,56 @@
 
 
 const trial_info = {
-    
-    key_press_trials:[
+    key_press_trials : [
         {
-            question: "Same or different?",
+            question: "Are the two pictures shown containing the same or different objects?",
+            picture: "images/1_50_same.jpg",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'same',
+            rotation: '50'
+        },
+        {
+            question: "Are the two pictures shown containing the same or different objects?",
+            picture: "images/7_150_different.jpg",
             key1: 'f',
             key2: 'j',
             f: 'same',
             j: 'different',
             expected: 'different',
-            picture: "images/1_50_different.jpg"
+            rotation: '150'
         },
         {
-            question: "Same or different?",
-            key1: 'f',
-            key2: 'j',
-            f: 'same',
-            j: 'different',
-            expected: 'same',
-            picture: "images/1_50_same.jpg"
-        },
-        {
-            question: "Same or different?",
+            question: "Are the two pictures shown containing the same or different objects?",
+            picture: "images/3_50_different.jpg",
             key1: 'f',
             key2: 'j',
             f: 'same',
             j: 'different',
             expected: 'different',
-            picture: "images/2_50_different.jpg"
+            rotation: '50'
         },
         {
-            question: "Same or different?",
+            question: "Are the two pictures shown containing the same or different objects?",
+            picture: "images/2_50_same.jpg",
             key1: 'f',
             key2: 'j',
             f: 'same',
             j: 'different',
             expected: 'same',
-            picture: "images/2_50_same.jpg"
+            rotation: '50'
         },
         {
-            question: "Same or different?",
+            question: "Are the two pictures shown containing the same or different objects?",
+            picture: "images/3_150_same.jpg",
             key1: 'f',
             key2: 'j',
             f: 'same',
             j: 'different',
             expected: 'same',
-            picture: "images/3_50_same.jpg"
+            rotation: '150'
         }
-        
-        
     ]
-    
 };

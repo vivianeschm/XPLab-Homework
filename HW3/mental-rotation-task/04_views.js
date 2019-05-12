@@ -23,7 +23,7 @@ const intro = babeViews.intro({
     trials: 1,
     name: 'intro',
     // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-    text:   `This is a sample introduction view.
+    text:   `This is a mental rotation task experiment.
             <br />
             <br />
             The introduction view welcomes the participant and gives general information
@@ -102,16 +102,14 @@ const thanks = babeViews.thanks({
 
 
 // Here, we initialize a forcedChoice view
-
-
-const key_Press_01 = babeViews.keyPress({
+const key_press_1A = babeViews.keyPress({
+    // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
     trials: trial_info.key_press_trials.length,
-    name: 'key_Press_01',
-    trial_type: 'key_Press_01',
+    // name and trial_type should be identical to the variable name
+    name: 'key_press_1A',
+    trial_type: 'key_press_1A',
     data: trial_info.key_press_trials
-    
 });
-
 
 // There are many more templates available:
 // forcedChoice, sliderRating, dropdownChoice, testboxInput, ratingScale, imageSelection, sentenceChoice, keyPress, selfPacedReading and selfPacedReading_ratingScale
