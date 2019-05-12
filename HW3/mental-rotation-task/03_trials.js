@@ -2,18 +2,55 @@
 
 
 const trial_info = {
-    forced_choice: [
+    
+    key_press_trials:[
         {
-            question: "What's on the bread?",
-            picture: "images/question_mark_02.png",
-            option1: 'jam',
-            option2: 'ham'
+            question: "Same or different?",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'different',
+            picture: "images/1_50_different.jpg"
         },
         {
-            question: "What's the weather like?",
-            picture: "images/weather.jpg",
-            option1: "shiny",
-            option2: "rainbow"
+            question: "Same or different?",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'same',
+            picture: "images/1_50_same.jpg"
+        },
+        {
+            question: "Same or different?",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'different',
+            picture: "images/2_50_different.jpg"
+        },
+        {
+            question: "Same or different?",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'same',
+            picture: "images/2_50_same.jpg"
+        },
+        {
+            question: "Same or different?",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'same',
+            picture: "images/3_50_same.jpg"
         }
+        
+        
     ]
+    
 };
