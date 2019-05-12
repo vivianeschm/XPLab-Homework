@@ -4,7 +4,7 @@
 const trial_info = {
     key_press_trials : [
         {
-            question: "Are the two pictures shown containing the same or different objects?",
+            question: "Are the two pictures shown containing the <strong>same</strong> or <strong>different</strong> objects?",
             picture: "images/1_50_same.jpg",
             key1: 'f',
             key2: 'j',
@@ -14,7 +14,7 @@ const trial_info = {
             rotation: '50'
         },
         {
-            question: "Are the two pictures shown containing the same or different objects?",
+            question: "Are the two pictures shown containing the <strong>same</strong> or <strong>different</strong> objects?",
             picture: "images/7_150_different.jpg",
             key1: 'f',
             key2: 'j',
@@ -24,7 +24,7 @@ const trial_info = {
             rotation: '150'
         },
         {
-            question: "Are the two pictures shown containing the same or different objects?",
+            question: "Are the two pictures shown containing the <strong>same</strong> or <strong>different</strong> objects?",
             picture: "images/3_50_different.jpg",
             key1: 'f',
             key2: 'j',
@@ -34,7 +34,7 @@ const trial_info = {
             rotation: '50'
         },
         {
-            question: "Are the two pictures shown containing the same or different objects?",
+            question: "Are the two pictures shown containing the <strong>same</strong> or <strong>different</strong> objects?",
             picture: "images/2_50_same.jpg",
             key1: 'f',
             key2: 'j',
@@ -44,7 +44,7 @@ const trial_info = {
             rotation: '50'
         },
         {
-            question: "Are the two pictures shown containing the same or different objects?",
+            question: "Are the two pictures shown containing the <strong>same</strong> or <strong>different</strong> objects?",
             picture: "images/3_150_same.jpg",
             key1: 'f',
             key2: 'j',
