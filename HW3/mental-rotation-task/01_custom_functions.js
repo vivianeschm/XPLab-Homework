@@ -112,14 +112,10 @@ const generate_path = function(){
     return object_list;
 }
 
-const get_trials = function(num){
+const get_trials = function(from, to){
     all_trails = generate_path();
-    num_trials = all_trails.slice(0,num);
+    num_trials = all_trails.slice(from,to);
     return shuffle(num_trials)
-}
-
-const get_task_trials = function(num){
-    all_trails = generate_path();
 }
 
 const shuffle = function shuffle(array) {
