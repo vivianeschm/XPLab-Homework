@@ -69,13 +69,11 @@ const check_response = function(data, next) {
 }
 
 const generate_path = function(){
-    //var path_list=[];
     var rot_list=[];
     var type_list=[];
     var object_list=[]
     var rot = ""
     var type = ""
-    
 
     for (i = 1;i < 16;i++) { 
         for(j=0;j<2;j++){        
@@ -107,10 +105,28 @@ const generate_path = function(){
                     expected: type,
                     correct: type,
                 }
-                //o.picture = "images/" + i + "_" + object.rotation + "_" + object.expected + ".jpg"
                 object_list.push(object)
             }
         }
     }
     return object_list;
+}
+
+const get_trials = function(num){
+    all_trails = generate_path();
+    num_trials = all_trails.slice(0,num);
+    return shuffle(num_trials)
+}
+
+const get_task_trials = function(num){
+    all_trails = generate_path();
+}
+
+const shuffle = function shuffle(array) {
+    a = array
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
 }

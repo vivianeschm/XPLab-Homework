@@ -4,7 +4,7 @@
 
 
 const trial_info = {
-    key_press_trials : generate_path(),
+    key_press_trials : get_trials(12),
     key_press_task: [
         {
         picture: generate_path()[0],
