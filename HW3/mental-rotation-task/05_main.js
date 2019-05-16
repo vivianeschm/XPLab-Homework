@@ -16,8 +16,11 @@ $("document").ready(function() {
         // You have to specify all views you want to use in this experiment and the order of them
         views_seq: [
             intro,
-            instructions,
+            instructions_practice,
             key_press_1A,
+            instructions_main,
+            //loop([key_press_2A, 48]),
+            key_press_2A,
             post_test,
             thanks,
         ],

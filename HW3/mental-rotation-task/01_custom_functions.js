@@ -48,3 +48,69 @@ const time_limit = function(data, next) {
     next();
 };
 // Declare your hooks here
+
+const check_response = function(data, next) {
+    data.response_checked = false;
+    $("body").on("keydown", function(e) {
+        if (data.response_checked == false) {
+            const keyPressed = String.fromCharCode(
+                e.which
+            ).toLowerCase();
+            if (keyPressed == data.key1 || keyPressed == data.key2) {
+                if (data[keyPressed] === data.correct) {
+                    alert('Your answer is correct! Yey!');
+                } else {
+                    alert('Sorry, this answer is incorrect :( The correct answer was ' + data.correct);
+                }
+                data.response_checked = true;
+                next();
+            }
+        }})
+}
+
+const generate_path = function(){
+    //var path_list=[];
+    var rot_list=[];
+    var type_list=[];
+    var object_list=[]
+    var rot = ""
+    var type = ""
+    
+
+    for (i = 1;i < 16;i++) { 
+        for(j=0;j<2;j++){        
+            if(j===0){ 
+                rot_list.push('50'); 
+                rot = "50"
+            }
+            if (j===1){
+                rot_list.push('150'); 
+                rot = "150"
+            }
+            for(k=0;k<2;k++){
+                if(k===0){
+                    type_list.push('different'); 
+                    type = "different"
+                }
+                if(k===1){
+                    type_list.push('same'); 
+                    type = "same"
+                }
+                var object = {
+                    question: "Are the two pictures shown containing the <strong>same</strong> or <strong>different</strong> objects?",
+                    picture: "images/" + i + "_" + rot + "_" + type + ".jpg",
+                    key1: 'f',
+                    key2: 'j',
+                    f: 'same',
+                    j: 'different',
+                    rotation: rot,
+                    expected: type,
+                    correct: type,
+                }
+                //o.picture = "images/" + i + "_" + object.rotation + "_" + object.expected + ".jpg"
+                object_list.push(object)
+            }
+        }
+    }
+    return object_list;
+}
